@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"/> <!-- 1o -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/> <!-- 2o, nuestra hoja css personalizada debe ir despues del llamado a Bootstrap-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <title>Mauricio Lopez - Contacto</title>
+</head>
+<body onload="obtener_localstorage();">
+  
+  <nav class="navbar navbar-expand-lg color-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand color-bco mouse" href="index.html">MAURICIO LOPEZ</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="btn-menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link color-bco mouse" aria-current="page" href="projects.html"
+            >PROYECTOS</a
+          >
+          <a class="nav-link color-bco mouse" href="about.html">ACERCA DE MI</a>
+          <a class="nav-link color-bco mouse" href="contact.html"><b>CONTACTO</b></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br><br><br>
+  <div class="switch-modo">
+    <div id="margin-switch-modo">
+      <button class="switchDark active" id="switch">
+        <span><i class='bx bx-sun'></i></span>
+        <span><i class='bx bx-moon'></i></span>
+    </div>
+  </div>
+  <br><br>
+
+  <h4 class="txt-centrado">Contáctame</h4><br/>
+  <div class="centrado"><hr class="mitad"/></div>
+  <br><br>
+
+  <div class="centrado">
+    <div class="width-slides-form">
+
+      <form method="POST" action="https://formspree.io/f/xbjegbno" id="form">
+        <div class="mb-3 initial">
+          <label for="nameandsurname" class="form-label">Nombre</label>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            id="nameandsurname"
+            placeholder="Nombre y apellido"
+            
+          />
+        </div><br>
+        <div class="mb-3 initial">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            placeholder="Email"
+            
+          />
+        </div><br>
+        <div class="mb-3 initial">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input
+            type="number"
+            name="telefono"
+            class="form-control"
+            id="telefono"
+            placeholder="Teléfono"
+            
+          />
+        </div><br>
+        <div class="mb-3 initial">
+          <label for="consulta" class="form-label"
+            >Mensaje</label
+          >
+          <textarea
+            class="form-control"
+            name="mensaje"
+            id="consulta"
+            rows="5"
+            placeholder="Mensaje" 
+            
+          ></textarea>
+        </div><br><br>
+        <div class="centrado">
+          <!-- Button trigger modal -->
+          <button type="submit" class="btn btn-primary">ENVIAR</button>
+  
+        </div>
+        <br><br>
+        <p class="warnings txt-centrado" id="warnings"></p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ventana-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content" id="modal"> <!--aca-->
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">¡Hola!!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡Muchas gracias por tu mensaje, responderé a la brevedad!
+        </div><br>
+      </div>
+    </div>
+  </div>
+
+
+  
+  <br><br><br>
+
+  
+
+  <div class="color-bco color-black">
+    <div class="row" id="footer">
+      <div class="center col-sm-6 info-footer-centrado">
+        <h5>DIRECCIÓN</h5>
+        <p>B. Mitre 666</p>
+        <p>San Carlos de Bariloche - 8400</p>
+        <p>Provincia de Río Negro - Patagonia Argentina</p>
+      </div>
+      <div class="center col-sm-6 info-footer-centrado">
+        <h5>EN REDES</h5>
+        <div id="redes">
+          <a target="_blank" href="https://wa.me/5492944690909?text=Me%20contacto%20desde%20tu%20CV%20web"><img id="wpp-icon" src="icons/Whatsapp.ico" alt="logo Whatsapp"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/mauricio-lopez-6a185b1ab/"><img id="in-icon" src="icons/linkedin.ico" alt="logo Linkedin"></a>
+        </div>
+      </div>
+    </div>
+    <p class="txt-centrado" id="licencia">Copyright © Mi sitio web 2023</p> 
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

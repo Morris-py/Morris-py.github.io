@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.css"/> <!-- 1o -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/> <!-- 2o, nuestra hoja css personalizada debe ir despues del llamado a Bootstrap-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mauricio Lopez - About</title>
+</head>
+<body onload="obtener_localstorage(); obtenerClimaBari();">
+  
+  <nav class="navbar navbar-expand-lg color-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand color-bco mouse" href="index.html">MAURICIO LOPEZ</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        id="btn-menu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link color-bco mouse" aria-current="page" href="projects.html"
+            >PROYECTOS</a
+          >
+          <a class="nav-link color-bco mouse" href="about.html"><b>ACERCA DE MI</b></a>
+          <a class="nav-link color-bco mouse" href="contact.html">CONTACTO</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br><br><br>
+  <div class="switch-modo">
+    <div id="margin-switch-modo">
+      <button class="switchDark active" id="switch">
+        <span><i class='bx bx-sun'></i></span>
+        <span><i class='bx bx-moon'></i></span>
+    </div>
+  </div>
+  <br><br>
+
+  <h4 class="txt-centrado">Acerca de mi</h4><br/>
+  <div class="centrado"><hr class="mitad"/></div>
+  <br><br>
+
+  <div class="centrado">
+    <div class="width-slides-form">
+
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.pexels.com/photos/12889887/pexels-photo-12889887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Buceo recreativo</h5>
+              <p>Me encanta bucear y enseñar el mundo submarino a aquellos que aún no han sentido la increíble sensación de respirar bajo el agua.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2019/07/27/07/24/forest-4366094_960_720.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Ciclismo de ruta y montaña</h5>
+              <p>Encuentro en la bicicleta una compañera ideal para salir a respirar aire puro y despejar la cabeza cuando estoy saturado.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/2582818/pexels-photo-2582818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Camping</h5>
+              <p>Siento que acampar en la naturaleza es una actividad que renueva mis energías y me libera del estrés.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.istockphoto.com/id/1226420378/es/foto/pesca-pescador-con-varilla-carrete-giratorio-en-la-orilla-del-r%C3%ADo-pesca-de-lucio-perca-carpa.jpg?s=612x612&w=0&k=20&c=2sscsZdNHMt2FUEiavDxGYzhRCWbXP4Igh_8SEh67f8=" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pesca</h5>
+              <p>La pesca es una actividad que me encanta mucho porque en ella trabajo la paciencia y perseverancia.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br>
+  <div class="centrado"><hr class="mitad"/></div>
+  <br><br>
+  <div id="container-clima" style="display: flex;flex-wrap: wrap;justify-content: space-evenly;">
+    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header txt-centrado"><b>Bariloche</b></div>
+      <div class="card-body" id="tempBari">
+        
+      </div>
+    </div>
+    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header txt-centrado" id="cityUsuario"><b>¿Y en tu ciudad?</b></div>
+      <div class="card-body" id="tempUsuario">
+
+        <div id="btn-info" style="display: flex;justify-content: center;"><!--div a reemplazar-->
+          <button onclick="getLocation()" type="button" class="btn btn-info" id="clickUsuario">Info</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <br><br><br>
+
+  <div class="color-bco color-black">
+    <div class="row" id="footer">
+      <div class="center col-sm-6 info-footer-centrado">
+        <h5>DIRECCIÓN</h5>
+        <p>B. Mitre 666</p>
+        <p>San Carlos de Bariloche - 8400</p>
+        <p>Provincia de Río Negro - Patagonia Argentina</p>
+      </div>
+      <div class="center col-sm-6 info-footer-centrado">
+        <h5>EN REDES</h5>
+        <div id="redes">
+          <a target="_blank" href="https://wa.me/5492944690909?text=Me%20contacto%20desde%20tu%20CV%20web"><img id="wpp-icon" src="icons/Whatsapp.ico" alt="logo Whatsapp"></a>
+          <a target="_blank" href="https://www.linkedin.com/in/mauricio-lopez-6a185b1ab/"><img id="in-icon" src="icons/linkedin.ico" alt="logo Linkedin"></a>
+        </div>
+      </div>
+    </div>
+    <p class="txt-centrado" id="licencia">Copyright © Mi sitio web 2023</p> 
+  </div>
+
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
